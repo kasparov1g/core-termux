@@ -1,41 +1,53 @@
-# **Core-Termux**  
-Automate your web development environment setup in Termux!  
-
-**Core-Termux** is a powerful tool designed to streamline the setup of a modern web development environment directly on your Android device using the Termux app. Whether you're a beginner or an experienced developer, this project will help you get started quickly and efficiently.
-
----
-
-## **✨ Features**  
+# **Core-Termux**                                         
+Automate your web development environment setup in Termux!                                                             
+**Core-Termux** is a powerful tool designed to streamline the setup of a modern web development environment directly on your Android device using the Termux app. Whether you're a beginner or an experienced developer, this project will help you get started quickly and efficiently.               
+---                                                        
+## **✨ Features**
 
 - 🚀 **Fully Automated Setup**  
-  Get your development environment ready with just one command.  
+  Get your development environment ready with just one command.
 
 - 📦 **Node.js Modules Management**  
   Automatically install and update essential global packages, including:  
   - `@devcorex/dev.x`  
+    **Dev.X** is the flagship tool developed by **DevCoreX**, designed to automate the creation of web applications, API setups, and frontend components with ease and flexibility.
+
   - `typescript`  
   - `@nestjs/cli`  
   - `prettier`  
   - `live-server`  
   - `localtunnel`  
-  - `vercel`  
+  - `vercel`
+
+- 💻 **Enhanced Shell Experience**  
+  Core-Termux uses **Oh My Zsh** as the default shell, enhanced with powerful plugins for productivity:  
+  - **zsh-defer**: Improves Zsh startup time by deferring plugin loading.  
+  - **powerlevel10k**: A highly customizable and fast theme for Zsh.  
+  - **zsh-autosuggestions**: Suggests commands based on history as you type.  
+  - **zsh-syntax-highlighting**: Adds syntax highlighting to your shell commands.  
+  - **zsh-history-substring-search**: Allows substring search in your command history.  
+  - **zsh-completions**: Extends the Zsh autocomplete system with additional features.  
+  - **fzf-tab**: Enhances tab completion with fuzzy search.  
+  - **zsh-you-should-use**: Reminds you to use aliases you've defined.  
+  - **zsh-autopair**: Auto-completes matching pairs like brackets and quotes.  
+  - **zsh-better-npm-completion**: Improves npm command-line completion.
 
 - 💡 **NvChad Integration**  
-  Seamlessly configure and update your optimized Neovim setup for Termux.  
+  Seamlessly configure and update your optimized Neovim setup for Termux.
 
 - 🔄 **Auto-Updates**  
-  Keep Core-Termux and its dependencies up to date effortlessly.  
+  Keep Core-Termux, **Dev.X**, and its dependencies up to date effortlessly.
 
 - ✅ **Compatibility**  
   Specifically designed for the Termux app, running on Android devices.
 
 ---
 
-## **📋 Prerequisites**  
+## **📋 Prerequisites**
 
-Before using Core-Termux, ensure the following:  
-1. **Termux App** installed on your Android device.  
-2. **Internet Connection** to fetch required packages and updates.  
+Before using Core-Termux, ensure the following:
+1. **Termux App** installed on your Android device.
+2. **Internet Connection** to fetch required packages and updates.
 
 ---
 
@@ -51,7 +63,7 @@ Before using Core-Termux, ensure the following:
    ```
 
 2. **Run the Setup Script**
-   Execute the update script to set up your environment:
+   Execute the setup script to set up your environment:
    ```bash
    bash setup.sh
    ```
@@ -75,6 +87,8 @@ Installs or updates essential Node.js modules globally.
 
 Fetches and updates your NvChad configuration.
 
+Keeps your shell plugins and configurations optimized.
+
 ---
 
 ## **📂 Project Structure**
@@ -84,10 +98,90 @@ Here's an overview of the Core-Termux directory structure:
 ```
 core-termux/
 ├── config            # Configuration file for colors, variables, etc.
-├── update.sh         # Main script to automate the setup and updates
+├── setup.sh          # Main script for setup core-termux
+├── update.sh         # Find updates of core-termux
 ├── README.md         # Project documentation
 └── .gitignore        # Git ignore rules
 ```
+
+---
+
+## **📦 Included Packages**
+
+Core-Termux comes preconfigured with the following Termux packages:
+
+`Languages`
+
+`nodejs`
+
+`python`
+
+`php`
+
+
+**Shell Utilities**
+
+`zsh`
+
+`curl`
+
+`wget`
+
+`lsd`
+
+`bat`
+
+`tree`
+
+`jq`
+
+
+**Development Tools**
+
+`git`
+
+`gh (GitHub CLI)`
+
+`neovim`
+
+`lua-language-server`
+
+`ncurses-utils`
+
+`ripgrep`
+
+`stylua`
+
+
+**Databases**
+
+`mongodb`
+
+`postgresql`
+
+`mariadb`
+
+`sqlite`
+
+
+**Networking Tools**
+
+`proot`
+
+`tmate`
+
+`cloudflared`
+
+
+**Utilities**
+
+`translate-shell`
+
+`html2text`
+
+`bc`
+
+`fzf`
 
 ---
 
