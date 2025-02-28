@@ -1,7 +1,11 @@
-# **Core-Termux**                                         
-Automate your web development environment setup in Termux!                                                             
-**Core-Termux** is a powerful tool designed to streamline the setup of a modern web development environment directly on your Android device using the Termux app. Whether you're a beginner or an experienced developer, this project will help you get started quickly and efficiently.               
----                                                        
+# **Core-Termux**
+
+Automate your web development environment setup in Termux!
+
+**Core-Termux** is a powerful tool designed to streamline the setup of a modern web development environment directly on your Android device using the Termux app. Whether you're a beginner or an experienced developer, this project will help you get started quickly and efficiently.
+
+---
+
 ## **✨ Features**
 
 - 🚀 **Fully Automated Setup**  
@@ -73,6 +77,7 @@ Before using Core-Termux, ensure the following:
 ## **💻 Update**
 
 **Update Environment**
+
 To update Core-Termux, Node.js modules, and NvChad, simply run:
 
 ```bash
@@ -110,78 +115,51 @@ core-termux/
 
 Core-Termux comes preconfigured with the following Termux packages:
 
-`Languages`
+**Languages**
 
-`nodejs`
-
-`python`
-
-`php`
-
+- `nodejs`
+- `python`
+- `php`
 
 **Shell Utilities**
 
-`zsh`
-
-`curl`
-
-`wget`
-
-`lsd`
-
-`bat`
-
-`tree`
-
-`jq`
-
+- `zsh`
+- `curl`
+- `wget`
+- `lsd`
+- `bat`
+- `tree`
+- `jq`
 
 **Development Tools**
 
-`git`
-
-`gh (GitHub CLI)`
-
-`neovim`
-
-`lua-language-server`
-
-`ncurses-utils`
-
-`ripgrep`
-
-`stylua`
-
+- `git`
+- `gh (GitHub CLI)`
+- `neovim`
+- `lua-language-server`
+- `ncurses-utils`
+- `ripgrep`
+- `stylua`
 
 **Databases**
 
-`mongodb`
-
-`postgresql`
-
-`mariadb`
-
-`sqlite`
-
+- `mongodb`
+- `postgresql`
+- `mariadb`
+- `sqlite`
 
 **Networking Tools**
 
-`proot`
-
-`tmate`
-
-`cloudflared`
-
+- `proot`
+- `tmate`
+- `cloudflared`
 
 **Utilities**
 
-`translate-shell`
-
-`html2text`
-
-`bc`
-
-`fzf`
+- `translate-shell`
+- `html2text`
+- `bc`
+- `fzf`
 
 ---
 
