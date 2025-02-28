@@ -52,13 +52,15 @@ Automate your web development environment setup in Termux!
 Before using Core-Termux, ensure the following:
 1. **Termux App** installed on your Android device.
 2. **Internet Connection** to fetch required packages and updates.
+3. **Git** installed on your Termux app.
 
 ---
 
-## **🛠 Installation**  
+## **🛠 Installation**
 
-1. **Clone the Repository**  
-   Open Termux and run the following commands:  
+1. **Clone the Repository**
+  Open Termux and run the following commands:
+
    ```bash
    git clone https://github.com/Dev-CoreX/core-termux.git
    ```
@@ -67,7 +69,7 @@ Before using Core-Termux, ensure the following:
    ```
 
 2. **Run the Setup Script**
-   Execute the setup script to set up your environment:
+Execute the setup script to set up your environment:
    ```bash
    bash setup.sh
    ```
