@@ -173,7 +173,7 @@ Core-Termux is developed and maintained by DevCoreX. For support, suggestions, o
 
 **Email:** termuxdev.00@gmail.com
 
-**GitHub:** Dev-CoreX
+**GitHub:** DevCoreXOfficial
 
 ---
 
