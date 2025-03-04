@@ -26,6 +26,10 @@ if [ "${local_commit}" != "${remote_commit}" ]; then
   echo -e "${GREEN}Updating termux repositories...${WHITE}"
   yes | pkg update && yes | pkg upgrade
 
+  # new packages
+
+  yes | pkg install imagemagick
+
   # update node modules
   echo -e "${GREEN}Updating node modules...${WHITE}"
   for module in "${node_modules[@]}"; do

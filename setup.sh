@@ -21,7 +21,7 @@ echo "core='${PWD}'" >> ~/.core-termux/config
 yes|pkg update && yes|pkg upgrade
 
 # install termux packages
-yes|pkg install git gh zsh neovim nodejs python php curl wget lua-language-server lsd bat tur-repo proot ncurses-utils ripgrep stylua tmate cloudflared translate-shell html2text jq postgresql mariadb sqlite bc tree fzf
+yes|pkg install git gh zsh neovim nodejs python php curl wget lua-language-server lsd bat tur-repo proot ncurses-utils ripgrep stylua tmate cloudflared translate-shell html2text jq postgresql mariadb sqlite bc tree fzf imagemagick
 
 # install termux-users repositories
 yes|pkg install mongodb

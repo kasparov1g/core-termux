@@ -162,6 +162,7 @@ Core-Termux comes preconfigured with the following Termux packages:
 - `html2text`
 - `bc`
 - `fzf`
+- `imagemagick`
 
 ---
 
