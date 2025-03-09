@@ -26,9 +26,17 @@ if [ "${local_commit}" != "${remote_commit}" ]; then
   echo -e "${GREEN}Updating termux repositories...${WHITE}"
   yes | pkg update && yes | pkg upgrade
 
-  # new packages
+  # new termux-packages
 
-  yes | pkg install imagemagick
+  if [[ "$(command -v magick)" == "" ]]; then
+    yes | pkg install imagemagick
+  fi
+
+  # new node_modules
+
+  if [[ "$(command -v markserv)" == "" ]]; then
+    npm install -g markserv
+  fi
 
   # update node modules
   echo -e "${GREEN}Updating node modules...${WHITE}"

@@ -22,6 +22,7 @@ Automate your web development environment setup in Termux!
   - `live-server`  
   - `localtunnel`  
   - `vercel`
+  - `markserv`
 
 - 💻 **Enhanced Shell Experience**  
   Core-Termux uses **Oh My Zsh** as the default shell, enhanced with powerful plugins for productivity:  
