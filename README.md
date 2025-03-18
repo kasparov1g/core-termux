@@ -51,9 +51,10 @@ Automate your web development environment setup in Termux!
 ## **📋 Prerequisites**
 
 Before using Core-Termux, ensure the following:
-1. **Termux App** installed on your Android device.
-2. **Internet Connection** to fetch required packages and updates.
-3. **Git** installed on your Termux app.
+1. **Minimum 4GB** of storage available on your android.
+2. **Termux App** installed on your Android device.
+3. **Internet Connection** to fetch required packages and updates.
+4. **Git** installed on your Termux app.
 
 ---
 
