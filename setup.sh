@@ -89,7 +89,7 @@ zstyle ':fzf-tab:*' switch-word yes" >> ~/.zshrc
 # add alias to ~/.zshrc
   echo "core='${PWD}'" >> ~/.zshrc
   echo 'alias ls="lsd"' >> ~/.zshrc
-  echo 'bash ${core}/update.sh' >> ~/.zshrc
+  echo 'source ${core}/update.sh' >> ~/.zshrc
 
 fi
 

@@ -78,8 +78,10 @@ if [ "${local_commit}" != "${remote_commit}" ]; then
 		cd
 	elif [[ "${updateOption}" == "n" || "${updateOption}" == "N" ]]; then
 		echo -e "Abort"
+    cd
 	else
-		echo -e "Abort"
+		echo -e "Error"
+    cd
 	fi
 else
 	cd
