@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -x
-
 source ~/.core-termux/config
 
 # check if you need to update
@@ -75,5 +73,3 @@ else
   cd
   echo -e ""
 fi
-
-set +x
