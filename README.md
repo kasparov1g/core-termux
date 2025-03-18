@@ -104,14 +104,14 @@ Keeps your shell plugins and configurations optimized.
 
 Here's an overview of the Core-Termux directory structure:
 
-`
+```
 core-termux/
 ├── config            # Configuration file for colors, variables, etc.
 ├── setup.sh          # Main script for setup core-termux
 ├── update.sh         # Find updates of core-termux
 ├── README.md         # Project documentation
 └── .gitignore        # Git ignore rules
-`
+```
 
 ---
 
