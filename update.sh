@@ -1,4 +1,5 @@
 #!/bin/bash
+exec < /dev/tty
 
 source ~/.core-termux/config
 
@@ -9,8 +10,8 @@ local_commit=$(git rev-parse main)
 remote_commit=$(git rev-parse origin/main)
 
 if [ "${local_commit}" != "${remote_commit}" ]; then
-	echo -e -n "${GREEN}
-  A new update is available. Would you like to update Core-Termux? [Y/n]: ${WHITE}"
+	echo -e -n "${D_CYAN}A new update is available.
+Would you like to update ${CYAN}Core-Termux${D_CYAN}? [Y/n] ${WHITE}"
 	read -r updateOption
 
 	if [[ "${updateOption}" == "y" || "${updateOption}" == "Y" ]]; then
@@ -49,7 +50,7 @@ if [ "${local_commit}" != "${remote_commit}" ]; then
 		# update node modules
 		echo -e "${GREEN}Updating node modules...${WHITE}"
 		for module in "${node_modules[@]}"; do
-			if [[ "${module}" == "@nestjs/cli" ]]; then
+			if [[ "${module}" == "@nestjs/cli" || "${module}" == "@devcorex/dev.x" ]]; then
 				version=$(npm list -g ${module} --depth=0 | grep ${module} | awk -F '@' '{print $3}')
 			else
 				version=$(npm list -g ${module} --depth=0 | grep ${module} | awk -F '@' '{print $2}')
