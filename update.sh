@@ -27,7 +27,7 @@ if [ "${local_commit}" != "${remote_commit}" ]; then
 			"live-server"
 			"localtunnel"
 			"vercel"
-      "markserv"
+			"markserv"
 		)
 
 		# update termux repositories
@@ -76,13 +76,12 @@ if [ "${local_commit}" != "${remote_commit}" ]; then
 		# update core-termux
 		cd ${core} && git pull origin main
 		cd
+	elif [[ "${updateOption}" == "n" || "${updateOption}" == "N" ]]; then
+		echo -e "Abort"
 	else
-		cd
-		echo -e ""
+		echo -e "Abort"
 	fi
-
-elif [[ "${updateOption}" == "n" || "${updateOption}" == "N" ]]; then
-	echo -e "Abort"
 else
-	echo -e "Abort"
+	cd
+	echo -e ""
 fi
