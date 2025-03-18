@@ -153,8 +153,6 @@ Core-Termux is developed and maintained by DevCoreX. For support, suggestions, o
 
 **Email:** devcorexofficial@gmail.com
 
-**GitHub:** DevCoreXOfficial
-
 ---
 
 ## **🎉 Contributing**
