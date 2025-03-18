@@ -9,67 +9,80 @@ local_commit=$(git rev-parse main)
 remote_commit=$(git rev-parse origin/main)
 
 if [ "${local_commit}" != "${remote_commit}" ]; then
-  echo -e "${GREEN}Updating Core-Termux...${WHITE}"
-  git pull origin main
+	echo -e -n "${GREEN}
+  A new update is available. Would you like to update Core-Termux? [Y/n]: ${WHITE}"
+	read -r updateOption
 
-  # node modules list
-  node_modules=(
-    "@devcorex/dev.x"
-    "typescript"
-    "@nestjs/cli"
-    "prettier"
-    "live-server"
-    "localtunnel"
-    "vercel"
-  )
+	if [[ "${updateOption}" == "y" || "${updateOption}" == "Y" ]]; then
 
-  # update termux repositories
-  echo -e "${GREEN}Updating termux repositories...${WHITE}"
-  yes | pkg update && yes | pkg upgrade
+		echo -e "${GREEN}Updating Core-Termux...${WHITE}"
+		git pull origin main
 
-  # new termux-packages
+		# node modules list
+		node_modules=(
+			"@devcorex/dev.x"
+			"typescript"
+			"@nestjs/cli"
+			"prettier"
+			"live-server"
+			"localtunnel"
+			"vercel"
+      "markserv"
+		)
 
-  if [[ "$(command -v magick)" == "" ]]; then
-    yes | pkg install imagemagick
-  fi
+		# update termux repositories
+		echo -e "${GREEN}Updating termux repositories...${WHITE}"
+		yes | pkg update && yes | pkg upgrade
 
-  # new node_modules
+		# new termux-packages
 
-  if [[ "$(command -v markserv)" == "" ]]; then
-    npm install -g markserv
-  fi
+		if [[ "$(command -v magick)" == "" ]]; then
+			yes | pkg install imagemagick
+		fi
 
-  # update node modules
-  echo -e "${GREEN}Updating node modules...${WHITE}"
-  for module in "${node_modules[@]}"; do
-    if [[ "${module}" == "@nestjs/cli" ]]; then
-      version=$(npm list -g ${module} --depth=0 | grep ${module} | awk -F '@' '{print $3}')
-    else
-      version=$(npm list -g ${module} --depth=0 | grep ${module} | awk -F '@' '{print $2}')
-    fi
+		# new node_modules
 
-    if [[ "${version}" != "$(npm show ${module} version)" ]]; then
-      echo -e "Updating ${module}..."
-      npm install -g ${module}@latest
-    fi
-  done
+		if [[ "$(command -v markserv)" == "" ]]; then
+			npm install -g markserv
+		fi
 
-  # update nvchad
-  cd ~/.core-termux/nvchad-termux
-  git fetch
-  local_commit=$(git rev-parse HEAD)
-  remote_commit=$(git rev-parse origin/main)
+		# update node modules
+		echo -e "${GREEN}Updating node modules...${WHITE}"
+		for module in "${node_modules[@]}"; do
+			if [[ "${module}" == "@nestjs/cli" ]]; then
+				version=$(npm list -g ${module} --depth=0 | grep ${module} | awk -F '@' '{print $3}')
+			else
+				version=$(npm list -g ${module} --depth=0 | grep ${module} | awk -F '@' '{print $2}')
+			fi
 
-  if [ "${local_commit}" != "${remote_commit}" ]; then
-    echo -e "Updating NvChad..."
-    git pull origin main
-    bash nvchad.sh
-  fi
+			if [[ "${version}" != "$(npm show ${module} version)" ]]; then
+				echo -e "Updating ${module}..."
+				npm install -g ${module}@latest
+			fi
+		done
 
-  # update core-termux
-  cd ${core} && git pull origin main
-  cd
+		# update nvchad
+		cd ~/.core-termux/nvchad-termux
+		git fetch
+		local_commit=$(git rev-parse HEAD)
+		remote_commit=$(git rev-parse origin/main)
+
+		if [ "${local_commit}" != "${remote_commit}" ]; then
+			echo -e "Updating NvChad..."
+			git pull origin main
+			bash nvchad.sh
+		fi
+
+		# update core-termux
+		cd ${core} && git pull origin main
+		cd
+	else
+		cd
+		echo -e ""
+	fi
+
+elif [[ "${updateOption}" == "n" || "${updateOption}" == "N" ]]; then
+	echo -e "Abort"
 else
-  cd
-  echo -e ""
+	echo -e "Abort"
 fi
