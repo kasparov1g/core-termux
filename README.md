@@ -54,7 +54,8 @@ Before using Core-Termux, ensure the following:
 1. **Minimum 4GB** of storage available on your android.
 2. **Termux App** installed on your Android device.
 3. **Internet Connection** to fetch required packages and updates.
-4. **Git** installed on your Termux app.
+4. **Termux Repositories** Updated.
+5. **Git** installed on your Termux app.
 
 ---
 
