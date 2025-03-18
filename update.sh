@@ -4,7 +4,7 @@ source ~/.core-termux/config
 # check if you need to update
 cd ${core}
 git fetch
-local_commit=$(git rev-parse HEAD)
+local_commit=$(git rev-parse main)
 remote_commit=$(git rev-parse origin/main)
 
 if [ "${local_commit}" != "${remote_commit}" ]; then
