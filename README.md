@@ -121,50 +121,27 @@ Core-Termux comes preconfigured with the following Termux packages:
 
 **Languages**
 
-- `nodejs`
-- `python`
-- `php`
+- `nodejs` | `python` | `php`
 
 **Shell Utilities**
 
-- `zsh`
-- `curl`
-- `wget`
-- `lsd`
-- `bat`
-- `tree`
-- `jq`
+- `zsh` | `curl` | `wget` | `lsd` | `bat` | `tree` | `jq`
 
 **Development Tools**
 
-- `git`
-- `gh (GitHub CLI)`
-- `neovim`
-- `lua-language-server`
-- `ncurses-utils`
-- `ripgrep`
-- `stylua`
+- `git` | `gh (GitHub CLI)` | `neovim` | `lua-language-server` | `ncurses-utils` | `ripgrep` | `stylua`
 
 **Databases**
 
-- `mongodb`
-- `postgresql`
-- `mariadb`
-- `sqlite`
+- `mongodb` | `postgresql` | `mariadb` | `sqlite`
 
 **Networking Tools**
 
-- `proot`
-- `tmate`
-- `cloudflared`
+- `proot` | `tmate` | `cloudflared`
 
 **Utilities**
 
-- `translate-shell`
-- `html2text`
-- `bc`
-- `fzf`
-- `imagemagick`
+- `translate-shell` | `html2text` | `bc` | `fzf` | `imagemagick`
 
 ---
 
