@@ -187,4 +187,4 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ---
 
-Thank you for using Core-Termux! Happy coding!
+Thank you for using Core-Termux, Happy coding!
