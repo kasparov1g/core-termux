@@ -101,6 +101,9 @@ echo "terminal-cursor-blink-rate=500
 extra-keys = [['ESC','</>','-','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]" >> ~/.termux/termux.properties
 echo "cursor=#00FF00" >> ~/.termux/colors.properties
 
+# add Meslo Nerd Font
+cp ./assets/fonts/font.ttf ~/.termux/font.ttf
+
 # download nvchad (code editor)
 rm -rf ~/.config/nvim
 rm -rf ~/.local/state/nvim
