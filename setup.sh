@@ -97,7 +97,6 @@ fi
 
 # custom termux-keys and cursor
 echo "terminal-cursor-blink-rate=500
-terminal-cursor-style=bar
 
 extra-keys = [['ESC','</>','-','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]" >> ~/.termux/termux.properties
 echo "cursor=#00FF00" >> ~/.termux/colors.properties
