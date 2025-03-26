@@ -65,7 +65,7 @@ Before using Core-Termux, ensure the following:
   Open Termux and run the following commands:
 
    ```bash
-   git clone https://github.com/Dev-CoreX/core-termux.git
+   git clone https://github.com/DevCoreXOfficial/core-termux.git
    ```
    ```bash
    cd core-termux
