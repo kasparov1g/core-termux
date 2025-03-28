@@ -70,9 +70,8 @@ Would you like to update ${CYAN}Core-Termux${D_CYAN}? [Y/n] ${WHITE}"
 
 		if [ "${local_commit}" != "${remote_commit}" ]; then
 			echo -e "Updating NvChad..."
-			git pull origin main
-			bash nvchad.sh
-		fi
+      bash update.sh
+    fi
 
 		# update core-termux
 		cd ${core} && git pull origin main
