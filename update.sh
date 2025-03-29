@@ -42,7 +42,7 @@ Would you like to update ${CYAN}NvChad-Termux${D_CYAN}? [Y/n] ${WHITE}"
 
 	if [[ "${nvchadUpdate}" == "y" || "${nvchadUpdate}" == "Y" ]]; then
 		git pull origin main
-		exec bash bootstrap.sh
+		bash bootstrap.sh
 	elif [[ "${nvchadUpdate}" == "n" || "${nvchadUpdate}" == "N" ]]; then
 		echo -e "Abort"
 		cd
