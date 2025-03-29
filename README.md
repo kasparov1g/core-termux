@@ -142,7 +142,7 @@ Core-Termux comes preconfigured with the following Termux packages:
 
 **Utilities**
 
-- `translate-shell` | `html2text` | `bc` | `fzf` | `imagemagick`
+- `translate-shell` | `html2text` | `bc` | `fzf` | `imagemagick` | `shfmt`
 
 ---
 

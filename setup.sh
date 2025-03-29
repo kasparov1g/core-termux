@@ -10,21 +10,21 @@ ${GREEN}Installing development enviroment...${WHITE}
 
 # create installation directory
 if [[ ! -d ~/.core-termux ]]; then
-  mkdir -p ~/.core-termux
-  cp config ~/.core-termux
+	mkdir -p ~/.core-termux
+	cp config ~/.core-termux
 fi
 
 # path to installation
-echo "core='${PWD}'" >> ~/.core-termux/config
+echo "core='${PWD}'" >>~/.core-termux/config
 
 # update termux repositories
-yes|pkg update && yes|pkg upgrade
+yes | pkg update && yes | pkg upgrade
 
 # install termux packages
-yes|pkg install git gh zsh neovim nodejs python php curl wget lua-language-server lsd bat tur-repo proot ncurses-utils ripgrep stylua tmate cloudflared translate-shell html2text jq postgresql mariadb sqlite bc tree fzf imagemagick shfmt
+yes | pkg install git gh zsh neovim nodejs python php curl wget lua-language-server lsd bat tur-repo proot ncurses-utils ripgrep stylua tmate cloudflared translate-shell html2text jq postgresql mariadb sqlite bc tree fzf imagemagick shfmt
 
 # install termux-users repositories
-yes|pkg install mongodb
+yes | pkg install mongodb
 
 # installing node global modules
 npm install -g @devcorex/dev.x typescript @nestjs/cli prettier live-server localtunnel vercel markserv
@@ -42,64 +42,64 @@ rm install.sh
 
 # create zsh-plugins directory
 if [[ ! -d ~/.zsh-plugins ]]; then
-  mkdir -p ~/.zsh-plugins
+	mkdir -p ~/.zsh-plugins
 fi
 
 # check zsh-plugins directory
 if [[ -d ~/.zsh-plugins ]]; then
 
-####### ZSH PLUGINS #######
+	####### ZSH PLUGINS #######
 
-  # zsh-defer
-  git clone https://github.com/romkatv/zsh-defer.git ~/.zsh-plugins/zsh-defer && echo 'source ~/.zsh-plugins/zsh-defer/zsh-defer.plugin.zsh' >> ~/.zshrc
+	# zsh-defer
+	git clone https://github.com/romkatv/zsh-defer.git ~/.zsh-plugins/zsh-defer && echo 'source ~/.zsh-plugins/zsh-defer/zsh-defer.plugin.zsh' >>~/.zshrc
 
-  # powerlevel10k
-  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zsh-plugins/powerlevel10k && echo 'source ~/.zsh-plugins/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
-  
-  # zsh-autosuggestions
-  git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh-plugins/zsh-autosuggestions && echo 'source ~/.zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ~/.zshrc
+	# powerlevel10k
+	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zsh-plugins/powerlevel10k && echo 'source ~/.zsh-plugins/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
-  # zsh-syntax-highlighting
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh-plugins/zsh-syntax-highlighting && echo 'source ~/.zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' >> ~/.zshrc
+	# zsh-autosuggestions
+	git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh-plugins/zsh-autosuggestions && echo 'source ~/.zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh' >>~/.zshrc
 
-  # zsh-history-substring-search
-  git clone https://github.com/zsh-users/zsh-history-substring-search.git ~/.zsh-plugins/zsh-history-substring-search && echo 'source ~/.zsh-plugins/zsh-history-substring-search/zsh-history-substring-search.zsh' >> ~/.zshrc
+	# zsh-syntax-highlighting
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh-plugins/zsh-syntax-highlighting && echo 'source ~/.zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' >>~/.zshrc
 
-  echo "bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down" >> ~/.zshrc
+	# zsh-history-substring-search
+	git clone https://github.com/zsh-users/zsh-history-substring-search.git ~/.zsh-plugins/zsh-history-substring-search && echo 'source ~/.zsh-plugins/zsh-history-substring-search/zsh-history-substring-search.zsh' >>~/.zshrc
 
-  # zsh-completions
-  git clone https://github.com/zsh-users/zsh-completions.git ~/.zsh-plugins/zsh-completions && echo 'fpath+=~/.zsh-plugins/zsh-completions' >> ~/.zshrc
+	echo "bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down" >>~/.zshrc
 
-  # fzf-tab
-  git clone https://github.com/Aloxaf/fzf-tab.git ~/.zsh-plugins/fzf-tab && echo 'source ~/.zsh-plugins/fzf-tab/fzf-tab.plugin.zsh' >> ~/.zshrc
+	# zsh-completions
+	git clone https://github.com/zsh-users/zsh-completions.git ~/.zsh-plugins/zsh-completions && echo 'fpath+=~/.zsh-plugins/zsh-completions' >>~/.zshrc
 
-  echo "zstyle ':completion:*' menu-select yes
-zstyle ':fzf-tab:*' switch-word yes" >> ~/.zshrc
+	# fzf-tab
+	git clone https://github.com/Aloxaf/fzf-tab.git ~/.zsh-plugins/fzf-tab && echo 'source ~/.zsh-plugins/fzf-tab/fzf-tab.plugin.zsh' >>~/.zshrc
 
-  # zsh-you-should-use
-  git clone https://github.com/MichaelAquilina/zsh-you-should-use.git ~/.zsh-plugins/zsh-you-should-use && echo 'source ~/.zsh-plugins/zsh-you-should-use/you-should-use.plugin.zsh' >> ~/.zshrc
+	echo "zstyle ':completion:*' menu-select yes
+zstyle ':fzf-tab:*' switch-word yes" >>~/.zshrc
 
-  # zsh-autopair
-  git clone https://github.com/hlissner/zsh-autopair.git ~/.zsh-plugins/zsh-autopair && echo 'source ~/.zsh-plugins/zsh-autopair/autopair.zsh' >> ~/.zshrc
+	# zsh-you-should-use
+	git clone https://github.com/MichaelAquilina/zsh-you-should-use.git ~/.zsh-plugins/zsh-you-should-use && echo 'source ~/.zsh-plugins/zsh-you-should-use/you-should-use.plugin.zsh' >>~/.zshrc
 
-  # zsh-better-npm-completion
-  git clone https://github.com/lukechilds/zsh-better-npm-completion.git ~/.zsh-plugins/zsh-better-npm-completion && echo 'source ~/.zsh-plugins/zsh-better-npm-completion/zsh-better-npm-completion.plugin.zsh' >> ~/.zshrc
+	# zsh-autopair
+	git clone https://github.com/hlissner/zsh-autopair.git ~/.zsh-plugins/zsh-autopair && echo 'source ~/.zsh-plugins/zsh-autopair/autopair.zsh' >>~/.zshrc
 
-# add alias to ~/.zshrc
-  echo "core='${PWD}'" >> ~/.zshrc
-  echo 'alias ls="lsd"' >> ~/.zshrc
-  echo 'INITIAL_PATH=$(pwd)' >> ~/.zshrc
-  echo 'source ${core}/update.sh > >(tee /dev/tty) 2>&1' >> ~/.zshrc
-  echo 'cd ${INITIAL_PATH}' >> ~/.zshrc
+	# zsh-better-npm-completion
+	git clone https://github.com/lukechilds/zsh-better-npm-completion.git ~/.zsh-plugins/zsh-better-npm-completion && echo 'source ~/.zsh-plugins/zsh-better-npm-completion/zsh-better-npm-completion.plugin.zsh' >>~/.zshrc
+
+	# add alias to ~/.zshrc
+	echo "core='${PWD}'" >>~/.zshrc
+	echo 'alias ls="lsd"' >>~/.zshrc
+	echo 'INITIAL_PATH=$(pwd)' >>~/.zshrc
+	echo 'source ${core}/update.sh > >(tee /dev/tty) 2>&1' >>~/.zshrc
+	echo 'cd ${INITIAL_PATH}' >>~/.zshrc
 
 fi
 
 # custom termux-keys and cursor
 echo "terminal-cursor-blink-rate=500
 
-extra-keys = [['ESC','</>','-','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]" >> ~/.termux/termux.properties
-echo "cursor=#00FF00" >> ~/.termux/colors.properties
+extra-keys = [['ESC','</>','-','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]" >>~/.termux/termux.properties
+echo "cursor=#00FF00" >>~/.termux/colors.properties
 
 # add Meslo Nerd Font
 cp ./assets/fonts/font.ttf ~/.termux/font.ttf
