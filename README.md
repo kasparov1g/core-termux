@@ -1,5 +1,7 @@
 # **Core-Termux**
 
+![Core-Termux Logo](assets/img/core-termux.webp)
+
 Automate your web development environment setup in Termux!
 
 **Core-Termux** is a powerful tool designed to streamline the setup of a modern web development environment directly on your Android device using the Termux app. Whether you're a beginner or an experienced developer, this project will help you get started quickly and efficiently.
