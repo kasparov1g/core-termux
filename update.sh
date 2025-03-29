@@ -41,6 +41,10 @@ Would you like to update ${CYAN}Core-Termux${D_CYAN}? [Y/n] ${WHITE}"
 			yes | pkg install imagemagick
 		fi
 
+    if [[ "$(command -v shfmt)" == "" ]]; then
+      yes | pkg install shfmt
+    fi
+
 		# new node_modules
 
 		if [[ "$(command -v markserv)" == "" ]]; then
