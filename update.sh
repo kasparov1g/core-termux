@@ -51,6 +51,5 @@ Would you like to update ${CYAN}NvChad-Termux${D_CYAN}? [Y/n] ${WHITE}"
 		cd
 	fi
 else
-	echo -e ""
 	cd
 fi
