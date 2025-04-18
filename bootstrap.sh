@@ -13,11 +13,18 @@ node_modules=(
 	"localtunnel"
 	"vercel"
 	"markserv"
+  "psqlformat"
 )
 
 # update termux repositories
 echo -e "${D_CYAN}Updating termux repositories...${WHITE}"
 yes | pkg update && yes | pkg upgrade
+
+# new termux-packages
+yes | pkg install perl
+
+# new node modules
+npm install -g psqlformat
 
 # update node modules
 echo -e "${D_CYAN}Updating node modules...${WHITE}"

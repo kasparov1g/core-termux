@@ -21,13 +21,13 @@ echo "core='${PWD}'" >>~/.core-termux/config
 yes | pkg update && yes | pkg upgrade
 
 # install termux packages
-yes | pkg install git gh zsh neovim nodejs python php curl wget lua-language-server lsd bat tur-repo proot ncurses-utils ripgrep stylua tmate cloudflared translate-shell html2text jq postgresql mariadb sqlite bc tree fzf imagemagick shfmt
+yes | pkg install git gh zsh neovim nodejs python perl php curl wget lua-language-server lsd bat tur-repo proot ncurses-utils ripgrep stylua tmate cloudflared translate-shell html2text jq postgresql mariadb sqlite bc tree fzf imagemagick shfmt
 
 # install termux-users repositories
 yes | pkg install mongodb
 
 # installing node global modules
-npm install -g @devcorex/dev.x typescript @nestjs/cli prettier live-server localtunnel vercel markserv
+npm install -g @devcorex/dev.x typescript @nestjs/cli prettier live-server localtunnel vercel markserv psqlformat
 
 # fixed localtunnel android error
 sed -i '/case '\''win32'\''/,/break;/ a\    case '\''android'\'':\n        command = '\''termux-open-url'\'';\n        break;' ${PREFIX}/lib/node_modules/localtunnel/node_modules/openurl/openurl.js
@@ -109,7 +109,7 @@ rm -rf ~/.config/nvim
 rm -rf ~/.local/state/nvim
 rm -rf ~/.local/share/nvim
 
-git clone https://github.com/Dev-CoreX/nvchad-termux.git ~/.core-termux/nvchad-termux
+git clone https://github.com/DevCoreXOfficial/nvchad-termux.git ~/.core-termux/nvchad-termux
 cd ~/.core-termux/nvchad-termux
 exec bash nvchad.sh
 

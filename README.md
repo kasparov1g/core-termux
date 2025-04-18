@@ -25,6 +25,7 @@ Automate your web development environment setup in Termux!
   - `localtunnel`  
   - `vercel`
   - `markserv`
+  - `psqlformat`
 
 - 💻 **Enhanced Shell Experience**  
   Core-Termux uses **Oh My Zsh** as the default shell, enhanced with powerful plugins for productivity:  
@@ -124,7 +125,7 @@ Core-Termux comes preconfigured with the following Termux packages:
 
 **Languages**
 
-- `nodejs` | `python` | `php`
+- `nodejs` | `python` | `php` | `perl`
 
 **Shell Utilities**
 
