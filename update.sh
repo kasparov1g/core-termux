@@ -1,4 +1,4 @@
-#!/bin/bash
+'#!/bin/bash
 exec </dev/tty
 
 source ~/.core-termux/config
@@ -46,10 +46,11 @@ Would you like to update ${CYAN}NvChad-Termux${D_CYAN}? [Y/n] ${WHITE}"
 	elif [[ "${nvchadUpdate}" == "n" || "${nvchadUpdate}" == "N" ]]; then
 		echo -e "Abort"
 		cd
+
 	else
 		echo -e "Error"
 		cd
 	fi
 else
 	cd
-fi
+f
